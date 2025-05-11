@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-"""
-This module contains the City class that inherits from BaseModel.
-"""
+"""Defines the City class."""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """City class for storing city information."""
-    
+    """Represent a city.
+
+    Attributes:
+        state_id (str): The state id.
+        name (str): The name of the city.
+    """
+
     state_id = ""
-    name = "" 
+    name = ""
