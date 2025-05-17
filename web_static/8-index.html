@@ -4,233 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AirBnB Clone</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            color: #484848;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            background-color: #FF5A5F;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        main {
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        section {
-            margin-bottom: 30px;
-            background: white;
-            padding: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #FF5A5F;
-            border-bottom: 1px solid #DDDDDD;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            padding: 10px;
-            border-bottom: 1px solid #DDDDDD;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        li:last-child {
-            border-bottom: none;
-        }
-        .amenities {
-            margin-top: 40px;
-        }
-        .amenities h2 {
-            font-size: 16px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        .amenities ul {
-            list-style: none;
-            padding: 0;
-        }
-        .amenities li {
-            padding: 10px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        .reviews {
-            margin-top: 40px;
-        }
-        .reviews h2 {
-            font-size: 16px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        .reviews ul {
-            list-style: none;
-            padding: 0;
-        }
-        .reviews li {
-            padding: 10px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        .places {
-            margin-top: 40px;
-        }
-        .places h2 {
-            font-size: 16px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        .places ul {
-            list-style: none;
-            padding: 0;
-        }
-        .places li {
-            padding: 10px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        footer {
-            background-color: #FF5A5F;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: auto;
-        }
-        .search {
-            margin-bottom: 20px;
-        }
-        .search input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #DDDDDD;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        .search button {
-            background-color: #FF5A5F;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .search button:hover {
-            background-color: #FF3B40;
-        }
-        .filters {
-            margin-bottom: 20px;
-        }
-        .filters select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #DDDDDD;
-            border-radius: 4px;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        .filters button {
-            background-color: #FF5A5F;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .filters button:hover {
-            background-color: #FF3B40;
-        }
-        .loading {
-            display: none;
-            text-align: center;
-            padding: 20px;
-        }
-        .loading:after {
-            content: "...";
-            animation: dots 1.5s steps(5, end) infinite;
-        }
-        @keyframes dots {
-            0%, 20% { content: "."; }
-            40% { content: ".."; }
-            60% { content: "..."; }
-            80%, 100% { content: ""; }
-        }
-        .error {
-            display: none;
-            color: #FF5A5F;
-            text-align: center;
-            padding: 20px;
-            background-color: #FFE5E6;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/4-common.css">
+    <link rel="stylesheet" href="styles/3-header.css">
+    <link rel="stylesheet" href="styles/3-footer.css">
+    <link rel="stylesheet" href="styles/6-filters.css">
+    <link rel="stylesheet" href="styles/8-places.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
 </head>
 <body>
     <header>
-        <h1>AirBnB Clone</h1>
+        <div class="logo"></div>
     </header>
-    <main>
-        <div class="error" id="error-message"></div>
-        <section class="search">
-            <input type="text" placeholder="Search...">
+    <div class="container">
+        <section class="filters">
+            <div class="locations">
+                <h3>States</h3>
+                <h4>California, Arizona...</h4>
+                <ul class="popover">
+                    <li>
+                        <h2>Arizona</h2>
+                        <ul>
+                            <li>Page</li>
+                            <li>Page2</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>California</h2>
+                        <ul>
+                            <li>San Francisco</li>
+                            <li>Los Altos</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="amenities">
+                <h3>Amenities</h3>
+                <h4>Internet, Kitchen...</h4>
+                <ul class="popover">
+                    <li>Internet</li>
+                    <li>TV</li>
+                    <li>Kitchen</li>
+                    <li>Iron</li>
+                </ul>
+            </div>
             <button>Search</button>
         </section>
-        <section class="filters">
-            <select id="states-filter">
-                <option value="">Select State</option>
-            </select>
-            <select id="cities-filter">
-                <option value="">Select City</option>
-            </select>
-            <select id="amenities-filter">
-                <option value="">Select Amenity</option>
-            </select>
-            <button>Filter</button>
-        </section>
-        <div class="loading" id="loading">Loading</div>
-        <section>
-            <h2>States</h2>
-            <ul id="states">
-                <!-- States will be listed here -->
-            </ul>
-        </section>
-        <section>
-            <h2>Cities</h2>
-            <ul id="cities">
-                <!-- Cities will be listed here -->
-            </ul>
-        </section>
-        <section class="amenities">
-            <h2>Amenities</h2>
-            <ul id="amenities">
-                <!-- Amenities will be listed here -->
-            </ul>
-        </section>
-        <section class="reviews">
-            <h2>Reviews</h2>
-            <ul id="reviews">
-                <!-- Reviews will be listed here -->
-            </ul>
-        </section>
         <section class="places">
-            <h2>Places</h2>
-            <ul id="places">
-                <!-- Places will be listed here -->
-            </ul>
+            <h1>Places</h1>
+            <article>
+                <h2>My home</h2>
+                <div class="price_by_night">$80</div>
+                <div class="information">
+                    <div class="max_guest">
+                        <div class="icon_group"></div>
+                        <p>2 Guests</p>
+                    </div>
+                    <div class="number_rooms">
+                        <div class="icon_bed"></div>
+                        <p>1 Bedroom</p>
+                    </div>
+                    <div class="number_bathrooms">
+                        <div class="icon_bath"></div>
+                        <p>1 Bathroom</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <p><b>Owner:</b> John Lennon</p>
+                </div>
+                <div class="description">
+                    <p>This is a lovely 1 bedroom and 1 bathroom apartment that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jingan Temple.</p>
+                </div>
+            </article>
+            <article>
+                <h2>Tiny house</h2>
+                <div class="price_by_night">$65</div>
+                <div class="information">
+                    <div class="max_guest">
+                        <div class="icon_group"></div>
+                        <p>4 Guests</p>
+                    </div>
+                    <div class="number_rooms">
+                        <div class="icon_bed"></div>
+                        <p>2 Bedrooms</p>
+                    </div>
+                    <div class="number_bathrooms">
+                        <div class="icon_bath"></div>
+                        <p>1 Bathroom</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <p><b>Owner:</b> Adrienne</p>
+                </div>
+                <div class="description">
+                    <p>Our place is a private, affordable stand-alone guest house centrally located just minutes to French Quarters, downtown, the Fair Grounds (Jazz Fest) and City Park. The guest house is a quaint, 400 square ft. with a full bath, mini kitchen, & living room. The extra high ceilings make the home feel more spacious. The sofa converts to a bed also. We have a hand made counter area that adds character to the room and a great porch/deck to relax on and have a glass of Merlot.</p>
+                </div>
+            </article>
+            <article>
+                <h2>A suite</h2>
+                <div class="price_by_night">$190</div>
+                <div class="information">
+                    <div class="max_guest">
+                        <div class="icon_group"></div>
+                        <p>6 Guests</p>
+                    </div>
+                    <div class="number_rooms">
+                        <div class="icon_bed"></div>
+                        <p>3 Bedrooms</p>
+                    </div>
+                    <div class="number_bathrooms">
+                        <div class="icon_bath"></div>
+                        <p>2 Bathrooms</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <p><b>Owner:</b> Bill Zuckerberg</p>
+                </div>
+                <div class="description">
+                    <p>Newly renovated spacious 3 bedrooms 2 baths in cozy Gastown style unit with the views of North Shore mountains. Woodward's landmark building situated at the historic heart of Vancouver.</p>
+                </div>
+            </article>
         </section>
-    </main>
-    <footer>
-        <p>Holberton School</p>
-    </footer>
+    </div>
+    <footer>Best School</footer>
 </body>
 </html> 

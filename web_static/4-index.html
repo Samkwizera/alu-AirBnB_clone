@@ -4,126 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AirBnB Clone</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            color: #484848;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            background-color: #FF5A5F;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        main {
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            flex: 1;
-        }
-        section {
-            margin-bottom: 30px;
-            background: white;
-            padding: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #FF5A5F;
-            border-bottom: 1px solid #DDDDDD;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            padding: 10px;
-            border-bottom: 1px solid #DDDDDD;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        li:last-child {
-            border-bottom: none;
-        }
-        .amenities {
-            margin-top: 40px;
-        }
-        .amenities h2 {
-            font-size: 16px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        .amenities ul {
-            list-style: none;
-            padding: 0;
-        }
-        .amenities li {
-            padding: 10px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        .reviews {
-            margin-top: 40px;
-        }
-        .reviews h2 {
-            font-size: 16px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        .reviews ul {
-            list-style: none;
-            padding: 0;
-        }
-        .reviews li {
-            padding: 10px;
-            border-bottom: 1px solid #DDDDDD;
-        }
-        footer {
-            background-color: #FF5A5F;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/4-common.css">
+    <link rel="stylesheet" href="styles/3-header.css">
+    <link rel="stylesheet" href="styles/3-footer.css">
+    <link rel="stylesheet" href="styles/4-filters.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
 </head>
 <body>
     <header>
-        <h1>AirBnB Clone</h1>
+        <div class="logo"></div>
     </header>
-    <main>
-        <section>
-            <h2>States</h2>
-            <ul id="states">
-                <!-- States will be listed here -->
-            </ul>
+    <div class="container">
+        <section class="filters">
+            <button>Search</button>
         </section>
-        <section>
-            <h2>Cities</h2>
-            <ul id="cities">
-                <!-- Cities will be listed here -->
-            </ul>
-        </section>
-        <section class="amenities">
-            <h2>Amenities</h2>
-            <ul id="amenities">
-                <!-- Amenities will be listed here -->
-            </ul>
-        </section>
-        <section class="reviews">
-            <h2>Reviews</h2>
-            <ul id="reviews">
-                <!-- Reviews will be listed here -->
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>Holberton School</p>
-    </footer>
+    </div>
+    <footer>Best School</footer>
 </body>
 </html> 
